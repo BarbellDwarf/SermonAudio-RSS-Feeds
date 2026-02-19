@@ -1,0 +1,95 @@
+html[data-bs-theme="dark"] .sermonaudio-config .panel,
+html[data-bs-theme="dark"] .sermonaudio-config .panel-body,
+html[data-bs-theme="dark"] .sermonaudio-config .panel-heading {
+    background-color: var(--hh-background-color-secondary, #333333);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .panel-heading {
+    background-color: var(--hh-background-color-main, #222222);
+    color: var(--hh-text-color-highlight, #ffffff);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .table,
+html[data-bs-theme="dark"] .sermonaudio-config .table > thead > tr > th,
+html[data-bs-theme="dark"] .sermonaudio-config .table > tbody > tr > td {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--hh-background-color-secondary, #333333);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .help-block,
+html[data-bs-theme="dark"] .sermonaudio-config .modal-content,
+html[data-bs-theme="dark"] .sermonaudio-config .modal-header,
+html[data-bs-theme="dark"] .sermonaudio-config .modal-body,
+html[data-bs-theme="dark"] .sermonaudio-config .modal-footer {
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .modal-content,
+html[data-bs-theme="dark"] .sermonaudio-config .modal-header,
+html[data-bs-theme="dark"] .sermonaudio-config .modal-body,
+html[data-bs-theme="dark"] .sermonaudio-config .modal-footer {
+    background-color: var(--hh-background-color-secondary, #333333);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config pre,
+html[data-bs-theme="dark"] .sermonaudio-config code {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .btn-default,
+html[data-bs-theme="dark"] .sermonaudio-config .btn-default:focus,
+html[data-bs-theme="dark"] .sermonaudio-config .btn-default:active {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .btn-default:hover {
+    background-color: var(--hh-background-color-secondary, #333333);
+    border-color: var(--hh-ct-menu-border-color, #4a4f55);
+    color: var(--hh-text-color-highlight, #ffffff);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config select.form-control,
+html[data-bs-theme="dark"] .sermonaudio-config .select2-container--default .select2-selection--single {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config select.form-control option {
+    background-color: var(--hh-background-color-main, #222222);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: var(--hh-text-color-main, #e6e6e6) transparent transparent transparent;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .select2-dropdown {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .select2-results__option {
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--hh-background-color-secondary, #333333);
+    color: var(--hh-text-color-highlight, #ffffff);
+}

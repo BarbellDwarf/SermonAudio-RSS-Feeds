@@ -1,0 +1,11 @@
+{
+    "id": "sermonaudio",
+    "name": "SermonAudio RSS Feeds",
+    "description": "Automatically posts new sermons from SermonAudio RSS feeds",
+    "keywords": ["sermonaudio", "rss", "humhub", "integration"],
+    "version": "1.0.0",
+    "humhub": {
+        "minVersion": "1.18.0"
+    },
+    "homepage": "https://github.com/BarbellDwarf/SermonAudio-RSS-Feeds.git"
+}
