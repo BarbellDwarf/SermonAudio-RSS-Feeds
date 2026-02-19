@@ -10,6 +10,7 @@ use humhub\modules\space\models\Membership;
 /** @var $space \humhub\modules\space\models\Space */
 
 ConfigAsset::register($this);
+$this->registerJs("document.body.classList.add('sermonaudio-config-active');");
 
 // Get space members for dropdown
 $spaceMembers = [];
@@ -69,8 +70,8 @@ foreach ($memberships as $membership) {
 
             <div class="help-block">
                 <strong>Feed URL Examples:</strong><br>
-                Audio: <code>https://feed.sermonaudio.com/broadcasters/gracebaptistvan</code><br>
-                Video: <code>https://feed.sermonaudio.com/broadcasters/gracebaptistvan?video=true</code>
+                Audio: <code>https://feed.sermonaudio.com/broadcasters/examplebroadcaster</code><br>
+                Video: <code>https://feed.sermonaudio.com/broadcasters/examplebroadcaster?video=true</code>
             </div>
         </div>
         <div class="modal-footer">

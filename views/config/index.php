@@ -8,6 +8,7 @@ use app\modules\sermonaudio\assets\ConfigAsset;
 /** @var $feeds \app\modules\sermonaudio\models\Feed[] */
 
 ConfigAsset::register($this);
+$this->registerJs("document.body.classList.add('sermonaudio-config-active');");
 
 ?>
 
@@ -132,10 +133,10 @@ ConfigAsset::register($this);
             <li><strong>Audio Feed:</strong> <code>https://feed.sermonaudio.com/broadcasters/{broadcaster_name}</code></li>
             <li><strong>Video Feed:</strong> <code>https://feed.sermonaudio.com/broadcasters/{broadcaster_name}?video=true</code></li>
         </ul>
-        <p>Example: For Grace Baptist Church Vancouver, use:</p>
+        <p>Example: For a broadcaster named examplebroadcaster, use:</p>
         <ul>
-            <li>Audio: <code>https://feed.sermonaudio.com/broadcasters/gracebaptistvan</code></li>
-            <li>Video: <code>https://feed.sermonaudio.com/broadcasters/gracebaptistvan?video=true</code></li>
+            <li>Audio: <code>https://feed.sermonaudio.com/broadcasters/examplebroadcaster</code></li>
+            <li>Video: <code>https://feed.sermonaudio.com/broadcasters/examplebroadcaster?video=true</code></li>
         </ul>
     </div>
 </div>

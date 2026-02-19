@@ -93,3 +93,81 @@ html[data-bs-theme="dark"] .sermonaudio-config .select2-results__option--highlig
     background-color: var(--hh-background-color-secondary, #333333);
     color: var(--hh-text-color-highlight, #ffffff);
 }
+
+html[data-bs-theme="dark"] .sermonaudio-config select.form-control {
+    color-scheme: dark;
+}
+
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-dropdown {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-results__option {
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--hh-background-color-secondary, #333333);
+    color: var(--hh-text-color-highlight, #ffffff);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config select.form-control,
+html[data-bs-theme="dark"] .sermonaudio-config select.form-control:focus,
+html[data-bs-theme="dark"] body.sermonaudio-config-active select.form-control,
+html[data-bs-theme="dark"] body.sermonaudio-config-active select.form-control:focus {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-ct-panel-border-color, #3a3f44) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config select.form-control option,
+html[data-bs-theme="dark"] body.sermonaudio-config-active select.form-control option {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
+
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-dropdown,
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-results__option {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
+
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--hh-background-color-secondary, #333333) !important;
+    color: var(--hh-text-color-highlight, #ffffff) !important;
+}
+
+html[data-bs-theme="dark"] .select2-dropdown,
+html[data-bs-theme="dark"] .select2-results__option {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
+
+html[data-bs-theme="dark"] .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--hh-background-color-secondary, #333333) !important;
+    color: var(--hh-text-color-highlight, #ffffff) !important;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config select,
+html[data-bs-theme="dark"] .sermonaudio-config .form-control,
+html[data-bs-theme="dark"] .sermonaudio-config .form-select,
+html[data-bs-theme="dark"] body.sermonaudio-config-active select,
+html[data-bs-theme="dark"] body.sermonaudio-config-active .form-control,
+html[data-bs-theme="dark"] body.sermonaudio-config-active .form-select {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-ct-panel-border-color, #3a3f44) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .select2-container--default .select2-selection--single,
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-container--default .select2-selection--single {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-ct-panel-border-color, #3a3f44) !important;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .select2-container--default .select2-selection--single .select2-selection__rendered,
+html[data-bs-theme="dark"] body.sermonaudio-config-active .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
