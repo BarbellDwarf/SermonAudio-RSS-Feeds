@@ -11,7 +11,17 @@ Automatically posts new sermons from SermonAudio RSS feeds into HumHub spaces.
 - Optional API integration for enhanced event filtering
 
 ## Installation
-1. Place this module in `protected/modules/sermonaudio`.
+
+### Option A: Install from GitHub Release (recommended)
+1. Download the latest release ZIP from the GitHub Releases page.
+2. Extract it to `protected/modules/sermonaudio`.
+3. Ensure the module folder name is exactly `sermonaudio`.
+4. Enable the module in **Administration -> Modules**.
+5. Enable it per space in **Space -> Modules**.
+
+### Option B: Install from the Repository
+1. Clone the repository into `protected/modules/sermonaudio`:
+	- `git clone https://github.com/BarbellDwarf/SermonAudio-RSS-Feeds.git sermonaudio`
 2. Enable the module in **Administration -> Modules**.
 3. Enable it per space in **Space -> Modules**.
 
@@ -42,10 +52,6 @@ For development and testing, you can enable debug mode to run checks at shorter 
 1. Go to **Administration -> Modules -> SermonAudio Settings**
 2. Check the "Enable debug mode (testing only)" checkbox
 3. Save the settings
-4. Add this cron job to your server:
-```bash
-*/15 * * * * /var/www/humhub/protected/modules/sermonaudio/check-sermons.sh >> /var/log/sermonaudio.log 2>&1
-```
 
 **Warning:** Debug mode should only be used for development/testing. Do not enable in production environments.
 
