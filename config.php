@@ -18,5 +18,10 @@ return [
             'event' => CronController::EVENT_ON_HOURLY_RUN,
             'callback' => ['app\modules\sermonaudio\Events', 'onCronRun']
         ],
+        [
+            'class' => CronController::class,
+            'event' => CronController::EVENT_ON_DAILY_RUN,
+            'callback' => ['app\modules\sermonaudio\Events', 'onDailyCronRun']
+        ],
     ]
 ];

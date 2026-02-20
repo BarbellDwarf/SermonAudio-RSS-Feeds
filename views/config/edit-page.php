@@ -5,6 +5,7 @@ use yii\helpers\Html;
 use app\modules\sermonaudio\models\Feed;
 use app\modules\sermonaudio\assets\ConfigAsset;
 use humhub\modules\space\models\Membership;
+use Yii;
 
 /** @var $model \app\modules\sermonaudio\models\Feed */
 /** @var $space \humhub\modules\space\models\Space */
@@ -20,6 +21,10 @@ foreach ($memberships as $membership) {
         $spaceMembers[$membership->user->id] = $membership->user->displayName;
     }
 }
+
+// Check if API is enabled
+$module = Yii::$app->getModule('sermonaudio');
+$hasApiKey = $module && $module->hasApiKey();
 
 ?>
 
@@ -45,9 +50,27 @@ foreach ($memberships as $membership) {
                 'video' => 'Video',
             ])->label('Feed Type') ?>
 
+            <?php if ($hasApiKey): ?>
+                <?php
+                $eventTypeOptions = array_merge(['' => 'All Event Types'], Feed::getEventTypeOptions());
+                ?>
+                <?= $form->field($model, 'event_type')->dropDownList(
+                    $eventTypeOptions
+                )->label('Event Type')->hint('Filter sermons by event type (API feature). Leave as "All Event Types" to include all sermons.') ?>
+            <?php endif; ?>
+
             <?= $form->field($model, 'cron_schedule')->dropDownList(
                 Feed::getCronScheduleOptions()
             )->label('Check Schedule')->hint('How often should we check for new sermons?') ?>
+
+            <?php if ($hasApiKey): ?>
+                <?= $form->field($model, 'sermon_limit')->textInput([
+                    'type' => 'number',
+                    'min' => '1',
+                    'max' => '100',
+                    'value' => $model->sermon_limit ?: Feed::getDefaultSermonLimit()
+                ])->label('Sermon Limit')->hint('Maximum number of new sermons to post per check (1-100). API feature. Default: 10') ?>
+            <?php endif; ?>
 
             <?php if (!empty($spaceMembers)): ?>
                 <?= $form->field($model, 'post_as_user_id')->dropDownList(

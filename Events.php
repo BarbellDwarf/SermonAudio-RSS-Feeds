@@ -89,6 +89,21 @@ class Events
     {
         Yii::$app->queue->push(new FetchSermonsJob());
     }
+
+    /**
+     * Daily cron event handler - runs once per day
+     * Cleans up soft-deleted sermon posts
+     */
+    public static function onDailyCronRun($event)
+    {
+        $module = Yii::$app->getModule('sermonaudio');
+        if ($module) {
+            $cleanedCount = $module->cleanupSoftDeletedSermonPosts();
+            if ($cleanedCount > 0) {
+                Yii::info("SermonAudio daily cleanup: removed {$cleanedCount} soft-deleted posts", 'sermonaudio');
+            }
+        }
+    }
     
     /**
      * Detect if the current theme is dark mode
