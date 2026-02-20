@@ -1,0 +1,8 @@
+# Runtime-generated asset cache folders
+/assets/*/
+!/assets/*.php
+
+# HumHub runtime artifacts (in case they appear inside module)
+/runtime/
+/tmp/
+*.log
