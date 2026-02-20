@@ -11,6 +11,61 @@ html[data-bs-theme="dark"] .sermonaudio-config .panel-heading {
     color: var(--hh-text-color-highlight, #ffffff);
 }
 
+html[data-bs-theme="dark"] .sermonaudio-config h4 {
+    color: var(--hh-text-color-highlight, #ffffff);
+    font-weight: 600;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .text-muted {
+    color: var(--hh-text-color-secondary, #b3b3b3) !important;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config code {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    color: var(--hh-text-color-secondary, #b3b3b3) !important;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid var(--hh-ct-panel-border-color, #3a3f44);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .alert {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .alert-info {
+    background-color: rgba(13, 110, 253, 0.1);
+    border-color: rgba(13, 110, 253, 0.3);
+    color: var(--hh-text-color-highlight, #ffffff);
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .form-group label {
+    color: var(--hh-text-color-highlight, #ffffff);
+    font-weight: 500;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .form-control,
+html[data-bs-theme="dark"] .sermonaudio-config input[type="text"],
+html[data-bs-theme="dark"] .sermonaudio-config input[type="password"],
+html[data-bs-theme="dark"] .sermonaudio-config input[type="number"],
+html[data-bs-theme="dark"] .sermonaudio-config textarea {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-ct-panel-border-color, #3a3f44) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
+
+html[data-bs-theme="dark"] .sermonaudio-config .form-control:focus,
+html[data-bs-theme="dark"] .sermonaudio-config input[type="text"]:focus,
+html[data-bs-theme="dark"] .sermonaudio-config input[type="password"]:focus,
+html[data-bs-theme="dark"] .sermonaudio-config input[type="number"]:focus,
+html[data-bs-theme="dark"] .sermonaudio-config textarea:focus {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-link-color, #007bff) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
 html[data-bs-theme="dark"] .sermonaudio-config .table,
 html[data-bs-theme="dark"] .sermonaudio-config .table > thead > tr > th,
 html[data-bs-theme="dark"] .sermonaudio-config .table > tbody > tr > td {

@@ -1,0 +1,103 @@
+/* Admin panel dark mode styling */
+
+html[data-bs-theme="dark"] .panel-default,
+html[data-bs-theme="dark"] .panel {
+    background-color: var(--hh-background-color-secondary, #333333);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .panel-heading {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-highlight, #ffffff);
+}
+
+html[data-bs-theme="dark"] .panel-body {
+    background-color: var(--hh-background-color-secondary, #333333);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] h4 {
+    color: var(--hh-text-color-highlight, #ffffff);
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+html[data-bs-theme="dark"] .text-muted {
+    color: var(--hh-text-color-secondary, #b3b3b3) !important;
+}
+
+html[data-bs-theme="dark"] code {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    color: var(--hh-text-color-secondary, #b3b3b3) !important;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--hh-ct-panel-border-color, #3a3f44);
+}
+
+html[data-bs-theme="dark"] .alert {
+    background-color: var(--hh-background-color-main, #222222);
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+    color: var(--hh-text-color-main, #e6e6e6);
+}
+
+html[data-bs-theme="dark"] .alert-info {
+    background-color: rgba(13, 110, 253, 0.1);
+    border-color: rgba(13, 110, 253, 0.3);
+    color: var(--hh-text-color-highlight, #ffffff);
+}
+
+html[data-bs-theme="dark"] .alert-info strong {
+    color: var(--hh-text-color-highlight, #ffffff);
+}
+
+html[data-bs-theme="dark"] .alert-info a {
+    color: #62b4ff;
+    text-decoration: underline;
+}
+
+html[data-bs-theme="dark"] .form-group label {
+    color: var(--hh-text-color-highlight, #ffffff);
+    font-weight: 500;
+}
+
+html[data-bs-theme="dark"] .form-control,
+html[data-bs-theme="dark"] input[type="text"],
+html[data-bs-theme="dark"] input[type="password"],
+html[data-bs-theme="dark"] input[type="number"],
+html[data-bs-theme="dark"] textarea,
+html[data-bs-theme="dark"] select {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-ct-panel-border-color, #3a3f44) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+}
+
+html[data-bs-theme="dark"] .form-control:focus,
+html[data-bs-theme="dark"] input[type="text"]:focus,
+html[data-bs-theme="dark"] input[type="password"]:focus,
+html[data-bs-theme="dark"] input[type="number"]:focus,
+html[data-bs-theme="dark"] textarea:focus,
+html[data-bs-theme="dark"] select:focus {
+    background-color: var(--hh-background-color-main, #222222) !important;
+    border-color: var(--hh-link-color, #007bff) !important;
+    color: var(--hh-text-color-main, #e6e6e6) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+html[data-bs-theme="dark"] .btn-primary {
+    background-color: var(--hh-link-color, #007bff);
+    border-color: var(--hh-link-color, #007bff);
+    color: #ffffff;
+}
+
+html[data-bs-theme="dark"] .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    color: #ffffff;
+}
+
+html[data-bs-theme="dark"] hr {
+    border-color: var(--hh-ct-panel-border-color, #3a3f44);
+}

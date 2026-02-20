@@ -2,8 +2,11 @@
 
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use app\modules\sermonaudio\assets\AdminAsset;
 
 /** @var $model \app\modules\sermonaudio\models\ApiSettingsForm */
+
+AdminAsset::register($this);
 
 ?>
 
