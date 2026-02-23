@@ -25,6 +25,16 @@ Automatically posts new sermons from SermonAudio RSS feeds into HumHub spaces.
 2. Enable the module in **Administration -> Modules**.
 3. Enable it per space in **Space -> Modules**.
 
+## Updating
+After updating the module, run its migrations from the HumHub `protected` folder:
+
+```
+cd /var/www/humhub/protected
+php yii migrate/up --migrationPath=@app/modules/sermonaudio/migrations
+```
+
+Then clear the cache in **Administration -> Settings -> Advanced -> Clear cache**.
+
 ## Configuration
 Open **Space -> Modules -> SermonAudio RSS Feeds -> Configure** and add a feed.
 

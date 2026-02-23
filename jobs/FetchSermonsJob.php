@@ -128,6 +128,10 @@ class FetchSermonsJob extends ActiveJob
 
         $newSermons = [];
         foreach ($sermons as $sermon) {
+            if (!empty($feed->event_type) && !$this->apiSermonMatchesEventType($sermon, $feed->event_type)) {
+                continue;
+            }
+
             $link = $this->getApiSermonLink($sermon);
             if (empty($link)) {
                 continue;
@@ -329,6 +333,61 @@ class FetchSermonsJob extends ActiveJob
         }
 
         return false;
+    }
+
+    protected function apiSermonMatchesEventType(array $sermon, string $eventType): bool
+    {
+        $eventType = $this->normalizeEventType($eventType);
+        if ($eventType === '') {
+            return true;
+        }
+
+        $candidates = [];
+
+        foreach (['eventTypeName', 'eventTypeTitle', 'eventTypeLabel', 'eventTypeDisplayName', 'eventTypeText', 'eventTypeValue', 'category'] as $field) {
+            if (!empty($sermon[$field]) && is_string($sermon[$field])) {
+                $candidates[] = $sermon[$field];
+            }
+        }
+
+        if (!empty($sermon['eventType'])) {
+            if (is_string($sermon['eventType'])) {
+                $candidates[] = $sermon['eventType'];
+            } elseif (is_array($sermon['eventType'])) {
+                foreach (['displayName', 'name', 'title', 'label', 'value'] as $subField) {
+                    if (!empty($sermon['eventType'][$subField]) && is_string($sermon['eventType'][$subField])) {
+                        $candidates[] = $sermon['eventType'][$subField];
+                    }
+                }
+            }
+        }
+
+        if (!empty($sermon['event'])) {
+            if (is_string($sermon['event'])) {
+                $candidates[] = $sermon['event'];
+            } elseif (is_array($sermon['event'])) {
+                foreach (['type', 'displayName', 'name', 'title', 'label'] as $subField) {
+                    if (!empty($sermon['event'][$subField]) && is_string($sermon['event'][$subField])) {
+                        $candidates[] = $sermon['event'][$subField];
+                    }
+                }
+            }
+        }
+
+        foreach ($candidates as $candidate) {
+            if ($this->normalizeEventType($candidate) === $eventType) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    protected function normalizeEventType(string $value): string
+    {
+        $value = trim(mb_strtolower($value));
+        $value = preg_replace('/\s+/', ' ', $value);
+        return $value ?? '';
     }
 
     protected function createSermonPost(Feed $feed, $item, $channel)
